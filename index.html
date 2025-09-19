@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <style>
+      body {
+        background-color: rgb(3, 3, 31);
+        min-height: 100vh;
+        width: 1500px;
+        height: 600px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        margin-left: 200px;
+        margin-top: 100px;
+        background-color: rgb(3, 3, 31);
+        width: 1000px;
+        height: 600px;
+        gap: 20px;
+      }
+      .box1 {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 9;
+        background-color: rgb(24, 24, 105);
+        border-radius: 10px;
+      }
+      .icon {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        top: 130px;
+        left: 240px;
+      }
+      .box2 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        background-color: orange;
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .work,
+      .play,
+      .study,
+      .run,
+      .social,
+      .selfcare {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .box3 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 9;
+        background-color: rgb(62, 219, 62);
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .box4 {
+        display: grid;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        background-color: rgb(111, 193, 255);
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .box5 {
+        background-color: blueviolet;
+        display: grid;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 9;
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .box6 {
+        background-color: palevioletred;
+        display: grid;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 5;
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .box7 {
+        background-color: rgb(255, 234, 0);
+        display: grid;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 5;
+        grid-row-end: 9;
+        border-radius: 10px;
+        position: relative;
+        z-index: 2;
+      }
+      .background {
+        background-color: rgb(24, 24, 105);
+        z-index: 22;
+        margin-top: 50px;
+        border-radius: 10px;
+        position: relative;
+      }
+      .text1 {
+        color: white;
+        font-family: sans-serif;
+        top: 30px;
+        left: 30px;
+        position: absolute;
+      }
+      .ellipsis {
+        position: absolute;
+        top: 30px;
+        right: 20px;
+      }
+      .number {
+        color: white;
+        font-size: 40px;
+        font-family: sans-serif;
+        position: absolute;
+        top: 40px;
+        left: 30px;
+      }
+      .grey {
+        font-size: 15px;
+        color: grey;
+        position: absolute;
+        top: 150px;
+        left: 30px;
+      }
+      .jeremy {
+        background-color: blueviolet;
+        border-radius: 10px;
+        margin-top: -200px;
+        height: 400px;
+        line-height: 2;
+      }
+      .grey1 {
+        color: grey;
+        position: absolute;
+        top: 260px;
+        left: 240px;
+      }
+      .name {
+        position: absolute;
+        top: 280px;
+        color: white;
+        font-size: 25px;
+        font-family: sans-serif;
+        left: 230px;
+      }
+      .bottom {
+        color: white;
+        position: absolute;
+        top: 550px;
+        display: flex;
+        flex-direction: column;
+        left: 250px;
+        justify-content: space-around;
+        line-height: 2;
+        opacity: 0.6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">
+        <div>
+          <img
+            style="
+              width: 60px;
+              height: 60px;
+              border: 1px solid white;
+              border-radius: 50%;
+            "
+            src="images/image-jeremy.png"
+            class="icon"
+          />
+          <div class="bottom">
+            <div>
+              <span>Daily</span>
+            </div>
+            <div><span>Weekly</span></div>
+            <div><span>Monthly</span></div>
+          </div>
+        </div>
+        <div class="jeremy">
+          <p class="grey1">Report for</p>
+          <p class="name">JEREMY <br />ROBSON</p>
+        </div>
+      </div>
+      <div class="box2">
+        <img src="images/icon-work.svg" class="work" />
+        <div class="background">
+          <span class="text1">Work</span>
+          <img src="images/icon-ellipsis.svg" class="ellipsis" />
+          <p class="number">32hrs</p>
+          <p class="grey">Last Week-36hrs</p>
+        </div>
+      </div>
+      <div class="box3">
+        <img src="images/icon-exercise.svg" class="run" />
+        <div class="background">
+          <span class="text1">Exercise</span>
+          <img src="images/icon-ellipsis.svg" class="ellipsis" />
+          <p class="number">4hrs</p>
+          <p class="grey">Last Week-5hrs</p>
+        </div>
+      </div>
+      <div class="box4">
+        <img src="images/icon-play.svg" class="play" />
+        <div class="background">
+          <span class="text1">Play</span>
+          <img src="images/icon-ellipsis.svg" class="ellipsis" />
+          <p class="number">10hrs</p>
+          <p class="grey">Last Week-8hrs</p>
+        </div>
+      </div>
+      <div class="box5">
+        <img src="images/icon-social.svg" class="social" />
+        <div class="background">
+          <span class="text1">Social</span>
+          <img src="images/icon-ellipsis.svg" class="ellipsis" />
+          <p class="number">5hrs</p>
+          <p class="grey">Last Week-10hrs</p>
+        </div>
+      </div>
+      <div class="box6">
+        <img src="images/icon-study.svg" class="study" />
+        <div class="background">
+          <span class="text1">Study</span>
+          <img src="images/icon-ellipsis.svg" class="ellipsis" />
+          <p class="number">4hrs</p>
+          <p class="grey">Last Week-7hrs</p>
+        </div>
+      </div>
+      <div class="box7">
+        <img src="images/icon-self-care.svg" class="selfcare" />
+        <div class="background">
+          <span class="text1">Self Care</span>
+          <img src="images/icon-ellipsis.svg" class="ellipsis" />
+          <p class="number">2hrs</p>
+          <p class="grey">Last Week-2hrs</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
